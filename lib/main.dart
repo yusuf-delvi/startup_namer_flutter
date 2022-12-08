@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +16,11 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Welcome to flutter'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Center(
+          // Drop the const, and
+          //child: Text('Hello World'),        // Replace this text...
+          child:
+              Text(WordPair("first", "second").asPascalCase), // With this text.
         ),
       ),
     );
